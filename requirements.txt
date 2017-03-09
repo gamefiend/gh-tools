@@ -1,0 +1,6 @@
+pygithub
+pyyaml
+colorama
+readchar
+prettytable
+
