@@ -2,4 +2,4 @@
 ghtools/
 *.swp
 ~*
-
+.ruby-version
