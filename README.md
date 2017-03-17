@@ -1,5 +1,5 @@
 # GH-Tools
-
+[![Build Status](https://travis-ci.org/gamefiend/gh-tools.svg?branch=master)](https://travis-ci.org/gamefiend/gh-tools)
 These are some of my tools that I use to manage my issues, PRs, etc, with GitHub. Using PyGithub as the basis.
 
 ## Set up.
