@@ -4,14 +4,26 @@ from gh_format import *
 from readchar import readkey
 
 g = Github(GITHUB_TOKEN)
-
+issue_filters = ['assigned',
+                 'mentioned',
+                 'created',
+                 'subscribed'
+                 ]
 
 def gh_init(gh):
-    return g.get_organization(DEFAULT_ORG)
+    try:
+        org = gh.get_organization(DEFAULT_ORG)
+    except:
+        raise Exception('Bad Credentials Supplied')
+    else:
+        return org
 
 
 def get_issues(option, gh):
-    return gh.get_issues(filter=option, state='open')
+    if option not in issue_filters:
+        raise Exception('Improper Issues')
+    else:
+        return gh.get_issues(filter=option, state='open')
 
 
 def display_issues(issues):
